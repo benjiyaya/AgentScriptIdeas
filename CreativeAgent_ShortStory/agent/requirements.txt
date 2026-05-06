@@ -1,0 +1,28 @@
+# Creative Agent — Short Story
+# LangGraph AI agent for anime short film story creation + prompt generation
+#
+# Install:  pip install -r requirements.txt
+# Requires:  Ollama running with qwen3.6:27b (or any supported model)
+# Optional:  ComfyUI running on 127.0.0.1:8188 (for image generation)
+# Optional:  DASHSCOPE_API_KEY env var (for Wan 2.7 video generation)
+
+# ── Core (required for story agent) ──
+langgraph>=1.1.0
+langchain-core>=1.3.0
+langchain-ollama>=1.1.0
+langgraph-prebuilt>=1.0.0
+pydantic>=2.0
+
+# ── Web UI ──
+gradio>=4.0
+
+# ── Execution scripts (generate_all.py) ──
+# No extra deps — uses stdlib urllib for ComfyUI API
+
+# ── Video pipeline (direct_pipeline.py) ──
+# No extra deps — uses stdlib urllib for DashScope API
+# Set DASHSCOPE_API_KEY env var for Wan 2.7 video generation
+
+# ── Development ──
+pytest>=8.0
+pytest-asyncio>=0.24
